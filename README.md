@@ -40,6 +40,11 @@
   <img src="https://streak-stats.demolab.com?user=momoqiqi-qwq&amp;theme=default&amp;hide_border=true&amp;date_format=Y.n.j" alt="连续提交" width="100%">
 </picture>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/momoqiqi-qwq/momoqiqi-qwq/output/snake-dark.svg">
+  <img src="https://raw.githubusercontent.com/momoqiqi-qwq/momoqiqi-qwq/output/snake.svg" alt="贡献贪吃蛇" width="100%">
+</picture>
+
 ### 常用
 
 <p>
