@@ -1,0 +1,44 @@
+name: trophy-cache
+
+on:
+  schedule:
+    # 每 3 天 03:00 UTC（= 北京时间 11:00）刷一次
+    - cron: "0 3 */3 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trophy-cache
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch trophy SVG from mirror
+        run: |
+          set -euo pipefail
+          mkdir -p out
+          BASE="https://github-trophies.vercel.app/?username=momoqiqi-qwq&no-frame=true&no-bg=true&margin-w=6&margin-h=6&column=6&rank=SSS,SS,S,AAA,AA,A,B,C"
+          curl -fsSL --retry 3 --retry-delay 5 --max-time 40 "${BASE}&theme=flat" -o out/trophy.svg
+          curl -fsSL --retry 3 --retry-delay 5 --max-time 40 "${BASE}&theme=onedark" -o out/trophy-dark.svg
+          for f in out/trophy.svg out/trophy-dark.svg; do
+            size=$(stat -c%s "$f")
+            echo "$f = $size bytes"
+            if [ "$size" -lt 5000 ]; then
+              echo "::error::$f too small, likely an error page — keep the previous cache"
+              exit 1
+            fi
+            grep -q "<svg" "$f" || { echo "::error::$f is not svg"; exit 1; }
+          done
+
+      - name: Publish to trophy branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: trophy
+          build_dir: out
+          commit_message: "chore: refresh trophies"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
