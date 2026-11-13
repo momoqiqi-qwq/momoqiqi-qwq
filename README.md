@@ -62,8 +62,8 @@
 <summary><sub>奖杯墙</sub></summary>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-trophies.vercel.app/?username=momoqiqi-qwq&amp;no-frame=true&amp;no-bg=true&amp;margin-w=6&amp;margin-h=6&amp;column=6&amp;rank=SSS,SS,S,AAA,AA,A,B,C&amp;theme=onedark">
-  <img src="https://github-trophies.vercel.app/?username=momoqiqi-qwq&amp;no-frame=true&amp;no-bg=true&amp;margin-w=6&amp;margin-h=6&amp;column=6&amp;rank=SSS,SS,S,AAA,AA,A,B,C&amp;theme=flat" alt="GitHub 奖杯" width="720">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/momoqiqi-qwq/momoqiqi-qwq/trophy/trophy-dark.svg">
+  <img src="https://raw.githubusercontent.com/momoqiqi-qwq/momoqiqi-qwq/trophy/trophy.svg" alt="GitHub 奖杯" width="720">
 </picture>
 
 </details>
