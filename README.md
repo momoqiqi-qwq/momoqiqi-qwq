@@ -58,14 +58,9 @@
   <img alt="微信小程序" src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-07C160?style=flat-square&logo=wechat&logoColor=white">
 </p>
 
-<details>
-<summary><sub>奖杯墙</sub></summary>
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/momoqiqi-qwq/momoqiqi-qwq/trophy/trophy-dark.svg">
-  <img src="https://raw.githubusercontent.com/momoqiqi-qwq/momoqiqi-qwq/trophy/trophy.svg" alt="GitHub 奖杯" width="720">
+  <img src="https://raw.githubusercontent.com/momoqiqi-qwq/momoqiqi-qwq/trophy/trophy.svg" alt="GitHub 奖杯" width="100%">
 </picture>
-
-</details>
 
 <p align="center"><sub>把工具做小，把体验做重。</sub></p>
